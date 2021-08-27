@@ -8,6 +8,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#todo">To Do List</a></li>
+    <li><a href="#current_limits">Current Limitations</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -42,6 +43,11 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 ## todo
 
 * Create a proper to do list
+
+<!-- Current Limimtations -->
+## current_limits
+
+* Create a list of known issues
 
 <!-- LICENSE -->
 ## License
