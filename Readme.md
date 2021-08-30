@@ -20,29 +20,41 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Here's a blank template to get started:
+This is my work in progress codebase for the game [Screeps](https://screeps.com/).
 
+Being so early in production, the code so far breaks the game into "phases", using "Memory.game_phase" to track this ingame.
+Each phase has its own set of goals;
+
+<!-- Phase 1 -->
+* Spawn an appropriate number of 'creeps' for the number of 'sources' in the room, and assign those creeps to roles with an appropriate ratio.
+* Upgrade the room controller to level 2, and set the room's phase to 2.
+
+<!-- Phase 2 -->
+* Build 5x "Extensions"
+* Build "Gen 2" creeps
+* Build roads to all resources in room
+* Build defenses
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+LORE IPSUM
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
+[Trello Board](https://trello.com/b/RqNLnsoO)
 
 <!-- TODO -->
 ## To-do List
 
-* Create a proper to do list
+* Fully implement "phase 1"
+  * Auto spawn and assign workers
+  * Upgrade Room Controller to lvl 2
 
 <!-- Current_Limitations -->
 ## Current Limitations

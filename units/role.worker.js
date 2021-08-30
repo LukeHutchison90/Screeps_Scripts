@@ -1,4 +1,4 @@
-var roleBuilder = {
+var roleWorker = {
 
     /** @param {Creep} creep **/
     run: function(creep) {
@@ -12,14 +12,11 @@ var roleBuilder = {
             }
         }
         else {
-            var targets = creep.room.find(FIND_CONSTRUCTION_SITES);
-            if(targets.length){
-                if(creep.build(targets[0]) == ERR_NOT_IN_RANGE){
-                    creep.moveTo(targets[0]);
-                }
+            if(creep.transfer(Game.spawns['Spawn1'], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(Game.spawns['Spawn1']);
             }
         }
 	}
 };
 
-module.exports = roleBuilder;
+module.exports = roleWorker;
