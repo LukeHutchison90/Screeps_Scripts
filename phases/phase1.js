@@ -4,7 +4,7 @@ var phase1 = {
         // Find all sources in the room containing "Spawn1"
         var sourceObjectArray = Game.spawns["Spawn1"].room.find(FIND_SOURCES)
         // Loop over each source, spawning and assigning workers
-        for(let source in sourceObjectArray){
+        for(const source of sourceObjectArray){
             // spawn a harvester if one does not exist
             if(Game.creeps.hasOwnProperty('Harvester_' + source.id + '_A') != true){
                 Game.spawns['Spawn1'].spawnCreep([WORK, CARRY, MOVE, MOVE], 'Harvester_' + source.id + '_A', {memory:{assigned_source: source.id, role: 'harvester', current_task: 'harvest'}})

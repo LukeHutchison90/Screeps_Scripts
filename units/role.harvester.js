@@ -10,7 +10,7 @@ var roleHarvester = {
         if(creep.store.getFreeCapacity() == 0){creep.memory.current_task = 'haul'}
         
 
-	    if(creep.memory.current_task = 'harvest') {
+	    if(creep.memory.current_task == 'harvest') {
             // replace value with route to assigned source id when implemented
             var source = creep.pos.findClosestByPath(FIND_SOURCES);
             if(creep.harvest(source) == ERR_NOT_IN_RANGE) {
