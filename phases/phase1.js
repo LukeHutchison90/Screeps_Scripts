@@ -1,5 +1,6 @@
 var phase1 = {
   run: function () {
+    
     // Find all sources in the room containing "Spawn1"
     var sourceObjectArray = Game.spawns["Spawn1"].room.find(FIND_SOURCES);
 
@@ -13,11 +14,11 @@ var phase1 = {
 
     // Loop over each source, spawning and assigning workers
     for (const source of sortedSourceArray) {
+        
       // spawn a harvester if one does not exist
-      if (Game.creeps.hasOwnProperty("Harvester_" + source.id) != true) {
         Game.spawns["Spawn1"].spawnCreep(
           [WORK, CARRY, MOVE, MOVE],
-          "Harvester_" + source.id,
+          "Harvester_" + sortedSourceArray.indexOf(source),
           {
             memory: {
               assigned_source: source.id,
@@ -26,12 +27,12 @@ var phase1 = {
             },
           }
         );
-      }
+      
       //spawn workers A + B if they don't exist
-      if (Game.creeps.hasOwnProperty("Worker_" + source.id + "_A") != true) {
+      if (Game.creeps.hasOwnProperty("Worker_" + sortedSourceArray.indexOf(source) + "_A") != true) {
         Game.spawns["Spawn1"].spawnCreep(
           [WORK, CARRY, MOVE, MOVE],
-          "Worker_" + source.id + "_A",
+          "Worker_" + sortedSourceArray.indexOf(source) + "_A",
           {
             memory: {
               assigned_source: source.id,
@@ -40,11 +41,10 @@ var phase1 = {
             },
           }
         );
-      }
-      if (Game.creeps.hasOwnProperty("Worker_" + source.id + "_B") != true) {
+        
         Game.spawns["Spawn1"].spawnCreep(
           [WORK, CARRY, MOVE, MOVE],
-          "Worker_" + source.id + "_B",
+          "Worker_" + sortedSourceArray.indexOf(source) + "_B",
           {
             memory: {
               assigned_source: source.id,
@@ -53,7 +53,7 @@ var phase1 = {
             },
           }
         );
-      }
+      }    
     }
   },
 };
